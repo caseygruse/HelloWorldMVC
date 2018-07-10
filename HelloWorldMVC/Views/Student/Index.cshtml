@@ -5,11 +5,12 @@
 
 <h2>Add a student</h2>
 
-@if (ViewBag.StudentAdded)
+@if (ViewBag.StudentAdded != null && ViewBag.StudentAdded)
 {
     <h3>Student added Succesfully!</h3>
 }
-
+else
+{
 <form method="post">
 
     <label for="txtSID">Student ID:</label>
@@ -35,3 +36,4 @@
 
     <input type="submit" value="Add Student"/>
 </form>
+}
