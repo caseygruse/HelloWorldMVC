@@ -1,0 +1,21 @@
+﻿
+@{ 
+    ViewBag.Title = "Home";
+}
+
+<h1>Welcome to the Home Page</h1>
+@*if You dont use the bottom overload it will assume you are looking for a view in the current controller.*@
+@Html.ActionLink("Contacts", "Contact");
+
+@Html.ActionLink("Contact", "Contact", "Home");
+
+<h2>@ViewBag.Message</h2>
+
+<ul>
+    @for (int i = 1; i <= 1000; i++)
+    {
+        <li>Product #@i</li>
+    }
+</ul>
+
+

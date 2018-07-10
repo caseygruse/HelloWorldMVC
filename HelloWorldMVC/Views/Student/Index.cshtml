@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Create Student";
+}
+
+<h2>Add a student</h2>
+
+@if (ViewBag.StudentAdded)
+{
+    <h3>Student added Succesfully!</h3>
+}
+
+<form method="post">
+
+    <label for="txtSID">Student ID:</label>
+    <input type="text" name="txtSID" />
+    <br />
+    <br />
+
+    <label for="txtFName">First Name</label>
+    <input type="text" name="txtFName" />
+    <br />
+    <br />
+
+    <label for="txtLName">Last Name</label>
+    <input type="text" name="txtLName" />
+    <br />
+    <br />
+
+    <label for="txtDOB">Date of Birth</label>
+    <input type="text" name="txtDOB" />
+    <br />
+    <br />  
+
+
+    <input type="submit" value="Add Student"/>
+</form>

@@ -1,0 +1,28 @@
+﻿@{ 
+    ViewBag.Title = "Contact Us";
+}
+
+    <header>
+       <h1>Contact Information Is Below</h1>
+    </header>
+    
+    <a href="~/Views/Home/Index.cshtml">content</a>
+    <!--Non working link 
+        Do Not Point Directly to a View-->
+    <br />
+
+    <a href="~/Home/index">Go To Index</a>
+
+    <br />
+    <br />
+    @**DONT PUT CONTROLLER AFTER CONTROLLER NAME*@
+    @Html.ActionLink("Go to Index!", "Index", "Home");
+
+    
+
+
+    <address>
+        4500 Steilacoom Blvd SW
+        Lakewood WA 98499
+    </address>
+
