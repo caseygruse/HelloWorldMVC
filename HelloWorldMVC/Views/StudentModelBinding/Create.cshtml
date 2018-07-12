@@ -1,0 +1,41 @@
+﻿@model HelloWorldMVC.Models.Student
+
+@{
+    ViewBag.Title = "Create Student";
+}
+@*the model @ model above means this page is binding to the Student class *@
+<h2>Create</h2>
+
+@if (ViewBag.Added == true)
+{
+    <h3>Student was added!</h3>
+}
+
+@*this is the same as the form tags*@
+@*posts to the same url (same controller/ same action unless you specify the action/url*@
+@using (Html.BeginForm())
+{
+    //form lable model binding
+    @Html.LabelFor(m => m.StudentId)
+    @Html.TextBoxFor(m => m.StudentId)
+    @Html.ValidationMessageFor(m => m.StudentId)
+    <br />
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+    <br />
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+    <br />
+    @Html.LabelFor(m => m.DateOfBirth)
+    @Html.TextBoxFor(m => m.DateOfBirth)
+    @Html.ValidationMessageFor(m => m.DateOfBirth)
+    <br />
+    <input type="submit" value="Create Student" />
+
+
+
+
+}
+
